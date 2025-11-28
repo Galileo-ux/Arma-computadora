@@ -44,7 +44,7 @@
         <select name="RAM"id="RAM">
             <option value="4GB">4 GB — $600</option>
             <option value="8GB">8 GB — $1050</option>
-            <option value="16GB ">16 GB — $1950</option>
+            <option value="16GB">16 GB — $1950</option>
         </select>
         <br>
         <br>
@@ -112,44 +112,50 @@
         <p>Elaborado por: Galileo · Proyecto de Formulario · © 2025</p>
     </footer>
     <script>
-        function calcularTotal () {
-          var total = 0;     
-            //Gabinete
-            var gabinete = document.getElementById("gabinete").value;
-            if (gabinete == minitorre) total += 700;
-            else if (gabinete == torre) total += 1200;
-            else if (gabinete == desktop) total += 550;
-            else if (gabinete == gamer) total += 2500;
-        //procesador
-            var procesador = document.getElementById("procesador").value;
-            if (procesador == celeron) total += 900;
-            else if (procesador == intel_i3) total += 1500;
-            else if (procesador == intel_i5) total += 3500;
-            else if (procesador == intel_i7) total += 5000;
-        //disco duro
-            var disco_duro = document.getElementById("disco_duro").value;
-            if (disco_duro == "500gb") total += 500;
-            else if (disco_duro == "750gb") total += 800;
-            else if (disco_duro == "1tb") total += 1000;
-            else if (disco_duro == "250gb_ssd") total += 900;
-            else if (disco_duro == "500gb_ssd") total += 1380;
-        //RAM
-            var RAM = document.getElementById("RAM").value;
-            if (RAM == "4GB") total += 600;
-            else if (RAM == "8GB") total += 1050;
-            else if (RAM == "16GB") total += 1950;
-        //monitor
-            var monitor = document.getElementById("monitor").value;
-            if (monitor == "17") total += 3000;
-            else if (monitor == "19") total += 3500;
-            else if (monitor == "21.5") total += 4000;
-            else if (monitor == "24") total += 5000;
-            else if (monitor == "27") total += 7000;
-            else if (monitor == "32") total += 9000;
-        //accesorios
-            var accesorios = document.getElementsByName("accesorios");
+ function calcularTotal () {
+    var total = 0;
 
-        }
+    // Gabinete
+    var gabinete = document.getElementById("gabinete").value;
+    if (gabinete == "minitorre") total += 700;
+    else if (gabinete == "torre") total += 1200;
+    else if (gabinete == "desktop") total += 550;
+    else if (gabinete == "gamer") total += 2500;
+
+    // Procesador
+    var procesador = document.getElementById("procesador").value;
+    if (procesador == "celeron") total += 900;
+    else if (procesador == "intel_i3") total += 1500;
+    else if (procesador == "intel_i5") total += 3500;
+    else if (procesador == "intel_i7") total += 5000;
+
+    // Disco duro
+    var disco_duro = document.getElementById("disco_duro").value;
+    if (disco_duro == "500gb") total += 500;
+    else if (disco_duro == "750gb") total += 800;
+    else if (disco_duro == "1tb") total += 1000;
+    else if (disco_duro == "250gb_ssd") total += 900;
+    else if (disco_duro == "500gb_ssd") total += 1380;
+
+    // RAM
+    var RAM = document.getElementById("RAM").value;
+    if (RAM == "4GB") total += 600;
+    else if (RAM == "8GB") total += 1050;
+    else if (RAM == "16GB") total += 1950;
+
+    // Monitor
+    var monitor = document.getElementById("monitor").value;
+    if (monitor == "17") total += 3000;
+    else if (monitor == "19") total += 3500;
+    else if (monitor == "21.5") total += 4000;
+    else if (monitor == "24") total += 5000;
+    else if (monitor == "27") total += 7000;
+    else if (monitor == "32") total += 9000;
+
+    // Accesorios
+    var accesorios = document.getElementsByName("accesorios");
+
+
     </script> 
 </body>
 </html>
