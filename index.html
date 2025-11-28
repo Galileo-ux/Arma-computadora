@@ -103,7 +103,7 @@
             <label for="caja_herramientas">Caja de Herramientas — $800</label><br>
         </fieldset>
         <br>
-        <button type="button" id="calcular_total" onclick="calcularTotal()">Calcular Total</button>
+        <button type="button" id="calcular_total" onclick="calcular()">Calcular Total</button>
         <br>
         <br>
     </form>
@@ -112,8 +112,9 @@
         <p>Elaborado por: Galileo · Proyecto de Formulario · © 2025</p>
     </footer>
     <script>
- function calcularTotal () {
-    var total = 0;
+function calcular() {
+  var total = 0;
+
 
     // Gabinete
     var gabinete = document.getElementById("gabinete").value;
@@ -153,9 +154,79 @@
     else if (monitor == "32") total += 9000;
 
     // Accesorios
-    var accesorios = document.getElementsByName("accesorios");
+     var mouse = document.getElementById("mouse");
+      if (mouse && mouse.checked) total += 500;
+      
+    var teclado = document.getElementById("teclado");
+    if (teclado && teclado. checked) total + 800 
+
+     
+    var bocinas = document.getElementById("bocinas");
+    if (bocinas && bocinas.checked) total += 1200;
+
+    var webcam = document.getElementById("webcam");
+    if (webcam && webcam.checked) total += 1500;
+
+    var ups = document.getElementById("ups");
+    if (ups && ups.checked) total += 2000;
+
+    var alfombrilla = document.getElementById("alfombrilla");
+    if (alfombrilla && alfombrilla.checked) total += 300;
+
+    var control_gamer = document.getElementById("control_gamer");
+    if (control_gamer && control_gamer.checked) total += 1800;
+
+    var luz_rgb = document.getElementById("luz_rgb");
+    if (luz_rgb && luz_rgb.checked) total += 600;
+
+    var silla_gamer = document.getElementById("silla_gamer");
+    if (silla_gamer && silla_gamer.checked) total += 4500;
 
 
+    var adaptador_wifi = document.getElementById("adaptador_wifi");
+    if (adaptador_wifi && adaptador_wifi.checked) total += 4500;
+
+    
+    var hub_usb = document.getElementById("hub_usb");
+    if (hub_usb && hub_usb.checked) total += 900;
+
+    var audifonos = document.getElementById("audifonos");
+    if (audifonos && audifonos.checked) total += 1300;
+
+    var audifonos = document.getElementById("audifonos");
+    if (audifonos && audifonos.checked) total += 1300;
+
+    
+    var monitor_adicional = document.getElementById("monitor_adicional");
+    if (monitor_adicional && monitor_adicional.checked) total += 5000;
+
+    var soporte = document.getElementById("soporte");
+    if (soporte && soporte.checked) total += 400;
+
+    var soporte = document.getElementById("soporte");
+    if (soporte && soporte.checked) total += 400;
+
+    var ventilador = document.getElementById("ventilador");
+    if (ventilador && ventilador.checked) total += 600;
+
+    var microfono = document.getElementById("microfono");
+    if (microfono && microfono.checked) total += 1100;
+
+    var lector_sd = document.getElementById("lector_sd");
+    if (lector_sd && lector_sd.checked) total += 500;
+
+    var cable_hdmi = document.getElementById("cable_hdmi");
+    if (cable_hdmi && cable_hdmi.checked) total += 300;
+
+    var base_refrigerante = document.getElementById("base_refrigerante");
+    if (base_refrigerante && base_refrigerante.checked) total += 1600
+
+    var caja_herramientas = document.getElementById("caja_herramientas");
+    if (caja_herramientas && caja_herramientas.checked) total += 800;
+
+alert("Total: $" + total);
+    }
+    </script> 
     </script> 
 </body>
 </html>
