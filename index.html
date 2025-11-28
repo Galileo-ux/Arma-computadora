@@ -103,7 +103,7 @@
             <label for="caja_herramientas">Caja de Herramientas — $800</label><br>
         </fieldset>
         <br>
-        <button type="submit" id="calcular_total">Calcular Total</button>
+        <button type="submit" id="calcular_total" onclick="calcularTotal()">Calcular Total</button>
         <br>
         <br>
     </form>
@@ -111,8 +111,78 @@
     <footer>
         <p>Elaborado por: Galileo · Proyecto de Formulario · © 2025</p>
     </footer>
-</body>
-</html>
+<script>
+function calcularTotal() {
+    let total = 0;
+
+    // --- Gabinete ---
+    let gabinete = document.getElementById("gabinete").value;
+    if (gabinete === "minitorre") total += 700;
+    if (gabinete === "torre") total += 1200;
+    if (gabinete === "desktop") total += 550;
+    if (gabinete === "gamer") total += 2500;
+
+    // --- Procesador ---
+    let procesador = document.getElementById("procesador").value;
+    if (procesador === "celeron") total += 900;
+    if (procesador === "intel_i3") total += 1500;
+    if (procesador === "intel_i5") total += 3500;
+    if (procesador === "intel_i7") total += 5000;
+
+    // --- Disco Duro ---
+    let disco = document.getElementById("disco_duro").value;
+    if (disco === "500gb") total += 500;
+    if (disco === "750gb") total += 800;
+    if (disco === "1tb") total += 1000;
+    if (disco === "250gb_ssd") total += 900;
+    if (disco === "500gb_ssd") total += 1380;
+
+    // --- RAM ---
+    let ram = document.getElementById("RAM").value;
+    if (ram === "4GB") total += 600;
+    if (ram === "8GB") total += 1050;
+    if (ram === "16GB") total += 1950;
+
+    // --- Monitor ---
+    let monitor = document.getElementById("monitor").value;
+    if (monitor === "17") total += 3000;
+    if (monitor === "19") total += 3500;
+    if (monitor === "21.5") total += 4000;
+    if (monitor === "24") total += 5000;
+    if (monitor === "27") total += 7000;
+    if (monitor === "32") total += 9000;
+
+    // --- Accesorios ---
+    let accesorios = document.getElementsByName("accesorios");
+    for (let i = 0; i < accesorios.length; i++) {
+        if (accesorios[i].checked) {
+            if (accesorios[i].value === "mouse") total += 500;
+            if (accesorios[i].value === "teclado") total += 800;
+            if (accesorios[i].value === "bocinas") total += 1200;
+            if (accesorios[i].value === "webcam") total += 1500;
+            if (accesorios[i].value === "ups") total += 2000;
+            if (accesorios[i].value === "alfombrilla") total += 300;
+            if (accesorios[i].value === "control_gamer") total += 1800;
+            if (accesorios[i].value === "luz_rgb") total += 600;
+            if (accesorios[i].value === "silla_gamer") total += 4500;
+            if (accesorios[i].value === "adaptador_wifi") total += 700;
+            if (accesorios[i].value === "hub_usb") total += 900;
+            if (accesorios[i].value === "audifonos") total += 1300;
+            if (accesorios[i].value === "monitor_adicional") total += 5000;
+            if (accesorios[i].value === "soporte") total += 400;
+            if (accesorios[i].value === "ventilador") total += 600;
+            if (accesorios[i].value === "microfono") total += 1100;
+            if (accesorios[i].value === "lector_sd") total += 500;
+            if (accesorios[i].value === "cable_hdmi") total += 300;
+            if (accesorios[i].value === "base_refrigerante") total += 1600;
+            if (accesorios[i].value === "caja_herramientas") total += 800;
+        }
+    }
+
+    alert("Total: $" + total);
+}
+</script>
+
     
 </body>
 </html>
